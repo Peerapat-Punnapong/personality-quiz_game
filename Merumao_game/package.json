@@ -1,0 +1,4 @@
+{ "name": "merumao", "private": true, "version": "1.0.0", "type": "module",
+  "scripts": { "build": "node scripts/build.mjs", "dev": "node scripts/build.mjs --watch & npx serve dist", "typecheck": "tsc -p .", "test": "node --import tsx --test tests/scoring.test.ts", "assets": "python3 scripts/build_assets.py /mnt/user-data/uploads donate-qr.jpg && python3 scripts/extract.py" },
+  "dependencies": { "react": "^19.2.0", "react-dom": "^19.2.0" },
+  "devDependencies": { "esbuild": "^0.28.0", "typescript": "^6.0.0", "tsx": "^4.20.0", "playwright": "^1.55.0" } }

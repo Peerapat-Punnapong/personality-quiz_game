@@ -1,0 +1,716 @@
+{
+ "brand/logo": {
+  "src": "logo design/เมรุเมา Fiery Thai Brush Logo (1) 3.png",
+  "w": 640,
+  "h": 262,
+  "source": "original"
+ },
+ "brand/logo-tagline": {
+  "src": "logo design/เมรุเมา_ Thai Flame Brush Logo 2.png",
+  "w": 1400,
+  "h": 585,
+  "source": "original"
+ },
+ "home/hero-duo": {
+  "src": "asset home page/ตัวละคร.png",
+  "w": 888,
+  "h": 743,
+  "source": "original"
+ },
+ "home/tavern": {
+  "src": "asset home page/เมรุเมา1.png",
+  "w": 1137,
+  "h": 588,
+  "source": "original"
+ },
+ "home/shadow-house": {
+  "src": "asset home page/บ้านเงา1.png",
+  "w": 1126,
+  "h": 823,
+  "source": "original"
+ },
+ "home/red-moon": {
+  "src": "asset home page/พระจันทร์แดง.png",
+  "w": 1125,
+  "h": 754,
+  "source": "original"
+ },
+ "home/lantern-post": {
+  "src": "asset home page/เสาไฟ1.png",
+  "w": 349,
+  "h": 335,
+  "source": "original"
+ },
+ "home/smoke1": {
+  "src": "asset home page/ควัน1.png",
+  "w": 515,
+  "h": 337,
+  "source": "original"
+ },
+ "home/smoke2": {
+  "src": "asset home page/ควัน2.png",
+  "w": 540,
+  "h": 321,
+  "source": "original"
+ },
+ "home/smoke3": {
+  "src": "asset home page/ควันน3.png",
+  "w": 587,
+  "h": 176,
+  "source": "original"
+ },
+ "home/smoke4": {
+  "src": "asset home page/ควัน4.png",
+  "w": 497,
+  "h": 153,
+  "source": "original"
+ },
+ "home/smoke6": {
+  "src": "asset home page/ควัน6.png",
+  "w": 380,
+  "h": 246,
+  "source": "original"
+ },
+ "home/smoke7": {
+  "src": "asset home page/ควัน7.png",
+  "w": 960,
+  "h": 832,
+  "source": "original"
+ },
+ "icons/step-bowl": {
+  "src": "icon ประกอบ/เตะขันน้ำมนต์.png",
+  "w": 422,
+  "h": 413,
+  "source": "original"
+ },
+ "icons/step-cards": {
+  "src": "icon ประกอบ/เลือกไพ่.png",
+  "w": 437,
+  "h": 414,
+  "source": "original"
+ },
+ "icons/step-siamsi": {
+  "src": "icon ประกอบ/เซียมซี.png",
+  "w": 499,
+  "h": 488,
+  "source": "original"
+ },
+ "icons/bullet-mirror": {
+  "src": "icon ประกอบ/option1.png",
+  "w": 360,
+  "h": 480,
+  "source": "original"
+ },
+ "icons/bullet-cards": {
+  "src": "icon ประกอบ/ไพ่options2.png",
+  "w": 355,
+  "h": 473,
+  "source": "original"
+ },
+ "icons/bullet-scroll": {
+  "src": "icon ประกอบ/option3.png",
+  "w": 360,
+  "h": 481,
+  "source": "original"
+ },
+ "icons/bullet-share": {
+  "src": "icon ประกอบ/option4.png",
+  "w": 245,
+  "h": 327,
+  "source": "original"
+ },
+ "icons/email": {
+  "src": "icon ประกอบ/email_icon.png",
+  "w": 238,
+  "h": 247,
+  "source": "original"
+ },
+ "icons/website": {
+  "src": "icon ประกอบ/website_icon.png",
+  "w": 250,
+  "h": 249,
+  "source": "original"
+ },
+ "ghosts/pob": {
+  "src": "ตัวละคร/ผีปอบหลอกกินแซ่บ.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/dib": {
+  "src": "ตัวละคร/ผีดิบจิบกับแกล้ม.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/tani": {
+  "src": "ตัวละคร/ผีตานีหนีผัวเที่ยว.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/am": {
+  "src": "ตัวละคร/ผีอำจำแต่ชื่อแฟนเก่า.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/kongkoi": {
+  "src": "ตัวละคร/ผีกองกอยคอยเขาทัก.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/takien": {
+  "src": "ตัวละคร/ผีตะเคียนเซียนยืมตังค์.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/krasue": {
+  "src": "ตัวละคร/ผีกระสือคือคนสวย.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/pret": {
+  "src": "ตัวละคร/ผีเปรตเบรกมองหนุ่มตี๋.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "quiz/scene01": {
+  "src": "ภาพประกอบquiz1-10/ref 2.png",
+  "w": 838,
+  "h": 598,
+  "source": "upscaled"
+ },
+ "quiz/scene02": {
+  "src": "ภาพประกอบquiz1-10/ChatGPT Image Oct 25, 2026, 10_36_21 PM-9 2.png",
+  "w": 838,
+  "h": 596,
+  "source": "upscaled"
+ },
+ "quiz/scene03": {
+  "src": "ภาพประกอบquiz1-10/ref3.png",
+  "w": 868,
+  "h": 618,
+  "source": "upscaled"
+ },
+ "quiz/scene04": {
+  "src": "ภาพประกอบquiz1-10/ref4.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene05": {
+  "src": "ภาพประกอบquiz1-10/ref5.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene06": {
+  "src": "ภาพประกอบquiz1-10/ref6.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene07": {
+  "src": "ภาพประกอบquiz1-10/ref7.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene08": {
+  "src": "ภาพประกอบquiz1-10/ref8.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene09": {
+  "src": "ภาพประกอบquiz1-10/ref9.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "quiz/scene10": {
+  "src": "ภาพประกอบquiz1-10/ref10.png",
+  "w": 866,
+  "h": 616,
+  "source": "upscaled"
+ },
+ "cards/q01-a": {
+  "src": "ไพ่/สำรับกับแกล้ม.svg",
+  "w": 400,
+  "h": 613,
+  "source": "original-svg"
+ },
+ "cards/q01-b": {
+  "src": "ไพ่/จอกสุรา.svg",
+  "w": 400,
+  "h": 617,
+  "source": "original-svg"
+ },
+ "cards/q01-c": {
+  "src": "ไพ่/เงาจันทร์.svg",
+  "w": 400,
+  "h": 637,
+  "source": "original-svg"
+ },
+ "cards/q01-d": {
+  "src": "ไพ่/สายตาต้องมาตร์.svg",
+  "w": 400,
+  "h": 638,
+  "source": "original-svg"
+ },
+ "cards/q02-a": {
+  "src": "ไพ่/โต๊ะกลางวง.svg",
+  "w": 400,
+  "h": 614,
+  "source": "original-svg"
+ },
+ "cards/q02-b": {
+  "src": "ไพ่/โต๊ะมุมเล็ก.svg",
+  "w": 400,
+  "h": 617,
+  "source": "original-svg"
+ },
+ "cards/q02-c": {
+  "src": "ไพ่/ประตูเปิด.svg",
+  "w": 400,
+  "h": 632,
+  "source": "original-svg"
+ },
+ "cards/q02-d": {
+  "src": "ไพ่/กระจกส่องเงา.svg",
+  "w": 400,
+  "h": 638,
+  "source": "original-svg"
+ },
+ "cards/q03-a": {
+  "src": "ไพ่/จานทอง.svg",
+  "w": 400,
+  "h": 618,
+  "source": "original-svg"
+ },
+ "cards/q03-b": {
+  "src": "ไพ่/แก้วประจำตัว.svg",
+  "w": 400,
+  "h": 621,
+  "source": "original-svg"
+ },
+ "cards/q03-c": {
+  "src": "ไพ่/ประกายเพชร.svg",
+  "w": 400,
+  "h": 635,
+  "source": "original-svg"
+ },
+ "cards/q03-d": {
+  "src": "ไพ่/เหรียญต่อรอง.svg",
+  "w": 400,
+  "h": 635,
+  "source": "original-svg"
+ },
+ "cards/q04-a": {
+  "src": "ไพ่/รอยยิ้มหว่านเสน่ห์.svg",
+  "w": 400,
+  "h": 614,
+  "source": "original-svg"
+ },
+ "cards/q04-b": {
+  "src": "ไพ่/ข้อความที่ยังไม่ได้ส่ง.svg",
+  "w": 400,
+  "h": 617,
+  "source": "original-svg"
+ },
+ "cards/q04-c": {
+  "src": "ไพ่/ทางของฉัน.svg",
+  "w": 400,
+  "h": 634,
+  "source": "original-svg"
+ },
+ "cards/q04-d": {
+  "src": "ไพ่/สายตาเงียบงัน.svg",
+  "w": 400,
+  "h": 637,
+  "source": "original-svg"
+ },
+ "cards/q05-a": {
+  "src": "ไพ่/บุปผาราตรี.svg",
+  "w": 400,
+  "h": 615,
+  "source": "original-svg"
+ },
+ "cards/q05-b": {
+  "src": "ไพ่/กระจกทมิฬ.svg",
+  "w": 400,
+  "h": 615,
+  "source": "original-svg"
+ },
+ "cards/q05-c": {
+  "src": "ไพ่/เหรียญพญานาค.svg",
+  "w": 400,
+  "h": 635,
+  "source": "original-svg"
+ },
+ "cards/q05-d": {
+  "src": "ไพ่/เปลวไฟนิรันดร์.svg",
+  "w": 400,
+  "h": 637,
+  "source": "original-svg"
+ },
+ "cards/q06-a": {
+  "src": "ไพ่/ข้อความเก่า.svg",
+  "w": 400,
+  "h": 616,
+  "source": "original-svg"
+ },
+ "cards/q06-b": {
+  "src": "ไพ่/พิมพ์แล้วลบ.svg",
+  "w": 400,
+  "h": 614,
+  "source": "original-svg"
+ },
+ "cards/q06-c": {
+  "src": "ไพ่/ทางเดินใหม่.svg",
+  "w": 400,
+  "h": 634,
+  "source": "original-svg"
+ },
+ "cards/q06-d": {
+  "src": "ไพ่/คำปรึกษา.svg",
+  "w": 400,
+  "h": 637,
+  "source": "original-svg"
+ },
+ "cards/q07-a": {
+  "src": "ไพ่/ผู้กล้า.svg",
+  "w": 400,
+  "h": 602,
+  "source": "original-svg"
+ },
+ "cards/q07-b": {
+  "src": "ไพ่/รวมพลัง.svg",
+  "w": 400,
+  "h": 609,
+  "source": "original-svg"
+ },
+ "cards/q07-c": {
+  "src": "ไพ่/แผนสำรอง.svg",
+  "w": 400,
+  "h": 636,
+  "source": "original-svg"
+ },
+ "cards/q07-d": {
+  "src": "ไพ่/เขตปลอดภัย.svg",
+  "w": 400,
+  "h": 634,
+  "source": "original-svg"
+ },
+ "cards/q08-a": {
+  "src": "ไพ่/ไมค์ทองคำ.svg",
+  "w": 400,
+  "h": 611,
+  "source": "original-svg"
+ },
+ "cards/q08-b": {
+  "src": "ไพ่/โต๊ะสนิท.svg",
+  "w": 400,
+  "h": 620,
+  "source": "original-svg"
+ },
+ "cards/q08-c": {
+  "src": "ไพ่/กระจกงาม.svg",
+  "w": 400,
+  "h": 635,
+  "source": "original-svg"
+ },
+ "cards/q08-d": {
+  "src": "ไพ่/หนุ่มต้องมนต์.svg",
+  "w": 400,
+  "h": 638,
+  "source": "original-svg"
+ },
+ "cards/q09-a": {
+  "src": "ไพ่/เจรจาต่อรอง.svg",
+  "w": 400,
+  "h": 611,
+  "source": "original-svg"
+ },
+ "cards/q09-b": {
+  "src": "ไพ่/เพื่อนช่วยเพื่อน.svg",
+  "w": 400,
+  "h": 617,
+  "source": "original-svg"
+ },
+ "cards/q09-c": {
+  "src": "ไพ่/ตรวจบัญชี.svg",
+  "w": 400,
+  "h": 638,
+  "source": "original-svg"
+ },
+ "cards/q09-d": {
+  "src": "ไพ่/รับผิดชอบ.svg",
+  "w": 400,
+  "h": 634,
+  "source": "original-svg"
+ },
+ "cards/q10-a": {
+  "src": "ไพ่/ข้อความถึงคนถูกใจ.svg",
+  "w": 400,
+  "h": 607,
+  "source": "original-svg"
+ },
+ "cards/q10-b": {
+  "src": "ไพ่/ของแทนความทรงจำ.svg",
+  "w": 400,
+  "h": 617,
+  "source": "original-svg"
+ },
+ "cards/q10-c": {
+  "src": "ไพ่/คำขอบคุณ.svg",
+  "w": 400,
+  "h": 635,
+  "source": "original-svg"
+ },
+ "cards/q10-d": {
+  "src": "ไพ่/ประตูรุ่งสาง.svg",
+  "w": 400,
+  "h": 637,
+  "source": "original-svg"
+ },
+ "bg/intro0": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ1.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro0-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ1.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro1": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ2.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro1-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ2.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro2": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ3.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro2-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ3.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro3": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ4.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro3-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ4.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro4": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ5.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro4-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ5.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro5": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ6.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro5-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ6.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/intro6": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ8.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/intro6-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/เกริ่นนำ8.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/ready": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/confrim page.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/ready-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/confrim page.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/quiz": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/quiz1-10.png",
+  "w": 1487,
+  "h": 1058,
+  "source": "original"
+ },
+ "bg/quiz-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/quiz1-10.png (blurred)",
+  "w": 743,
+  "h": 529,
+  "source": "derived"
+ },
+ "bg/result": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/result page.png",
+  "w": 1440,
+  "h": 1024,
+  "source": "original"
+ },
+ "bg/result-blur": {
+  "src": "backgroundเกริ่นนำกับ quiz-1-10/result page.png (blurred)",
+  "w": 720,
+  "h": 512,
+  "source": "derived"
+ },
+ "lore/chapter1": {
+  "src": "background เนื้อเรื่อง/บทที่1.png",
+  "w": 773,
+  "h": 2035,
+  "source": "original"
+ },
+ "lore/chapter2": {
+  "src": "background เนื้อเรื่อง/บทที่2.png",
+  "w": 773,
+  "h": 2035,
+  "source": "original"
+ },
+ "lore/chapter3": {
+  "src": "background เนื้อเรื่อง/บทที่3.png",
+  "w": 773,
+  "h": 2035,
+  "source": "original"
+ },
+ "home/group": {
+  "src": "กล่องแสดงผลัพธ์/image 49.svg",
+  "w": 1100,
+  "h": 703,
+  "source": "original-svg"
+ },
+ "result/trait-frame": {
+  "src": "กล่องแสดงผลัพธ์/Group 24.png",
+  "w": 520,
+  "h": 670,
+  "source": "original"
+ },
+ "result/icon-strength": {
+  "src": "กล่องแสดงผลัพธ์/03_muscle_icon 1.png",
+  "w": 96,
+  "h": 92,
+  "source": "original"
+ },
+ "result/icon-weak": {
+  "src": "กล่องแสดงผลัพธ์/04_ghost_icon 1.png",
+  "w": 96,
+  "h": 94,
+  "source": "original"
+ },
+ "result/icon-love": {
+  "src": "กล่องแสดงผลัพธ์/04_broken_heart_icon 1.png",
+  "w": 96,
+  "h": 78,
+  "source": "original"
+ },
+ "result/prop-glasses": {
+  "src": "กล่องแสดงผลัพธ์/06_clinking_glasses_hands 1.png",
+  "w": 420,
+  "h": 169,
+  "source": "original"
+ },
+ "result/prop-pot": {
+  "src": "กล่องแสดงผลัพธ์/16_spicy_cooking_pot 1.png",
+  "w": 420,
+  "h": 214,
+  "source": "original"
+ },
+ "result/prop-bowl": {
+  "src": "กล่องแสดงผลัพธ์/05_spilled_bowl_chilies 1.png",
+  "w": 420,
+  "h": 160,
+  "source": "original"
+ },
+ "donate/qr": {
+  "src": "donate QR (supplied in chat)",
+  "w": 720,
+  "h": 976,
+  "source": "original"
+ },
+ "intro/c1-shop": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_43_47 PM.png (extracted from mockup)",
+  "w": 758,
+  "h": 638,
+  "source": "extracted"
+ },
+ "intro/c2-door": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_43_58 PM.png (extracted from mockup)",
+  "w": 450,
+  "h": 578,
+  "source": "extracted"
+ },
+ "intro/c3-teller": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_44_03 PM.png (extracted from mockup)",
+  "w": 592,
+  "h": 592,
+  "source": "extracted"
+ },
+ "intro/c4-bowl": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_44_12 PM.png (extracted from mockup)",
+  "w": 675,
+  "h": 608,
+  "source": "extracted"
+ },
+ "intro/c5-hand": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_44_18 PM.png (extracted from mockup)",
+  "w": 682,
+  "h": 488,
+  "source": "extracted"
+ },
+ "intro/c6-sign": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_44_43 PM.png (extracted from mockup)",
+  "w": 458,
+  "h": 585,
+  "source": "extracted"
+ },
+ "result/sign-lantern": {
+  "src": "ChatGPT Image Nov 5, 2026, 08_46_30 PM.png (extracted from mockup)",
+  "w": 368,
+  "h": 278,
+  "source": "extracted"
+ }
+}
