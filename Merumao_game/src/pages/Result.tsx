@@ -4,21 +4,48 @@ import { hrefFor, navigate } from '../lib/router';
 import { resetQuiz } from '../lib/store';
 import { Flame, Img, Particles, SceneBg, Toast } from '../components/ui';
 import { play } from '../lib/sound';
+import { makeResultImage } from '../lib/shareImage';
 
 export default function Result({ id }: { id: GhostId }) {
   const g = GHOSTS[id];
   const [more, setMore] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [link, setLink] = useState<string | null>(null);
+  const [card, setCard] = useState<{ url: string; file: File } | null>(null);
+  const [busy, setBusy] = useState(false);
   useEffect(() => { const t = setTimeout(() => play('fanfare'), 700); return () => clearTimeout(t); }, [id]);
   useEffect(() => { document.title = `คืนนี้ฉันเป็น ${g.name} · เมรุเมา`; return () => { document.title = 'เมรุเมา — คืนนี้คุณเป็นผีอะไร?'; }; }, [id]);
   const flash = (m: string) => { setToast(m); setTimeout(() => setToast(null), 2200); };
+  const url = hrefFor(`/result/${id}`);
+  const text = `คืนนี้ฉันเป็น ${g.name}! มาเปิดไพ่ดูว่าคุณเป็นผีอะไร`;
+  // 1) build the image and show a preview
   const share = async () => {
-    const url = hrefFor(`/result/${id}`);
-    const data = { title: 'เมรุเมา — คืนนี้คุณเป็นผีอะไร?', text: `คืนนี้ฉันเป็น ${g.name}! มาเปิดไพ่ดูว่าคุณเป็นผีอะไร`, url };
-    try { if (navigator.share) { await navigator.share(data); return; } } catch (e: any) { if (e?.name === 'AbortError') return; }
-    try { await navigator.clipboard.writeText(`${data.text} ${url}`); flash('คัดลอกลิงก์แล้ว'); } catch { setLink(url); }
+    if (busy) return; setBusy(true);
+    try {
+      const blob = await makeResultImage(g, location.host || 'merumao');
+      const file = new File([blob], `merumao-${id}.png`, { type: 'image/png' });
+      setCard({ url: URL.createObjectURL(blob), file });
+    } catch { shareLink(); } finally { setBusy(false); }
   };
+  // 2) share the picture (phones) …
+  const shareImage = async () => {
+    if (!card) return;
+    try {
+      if (navigator.canShare?.({ files: [card.file] })) { await navigator.share({ files: [card.file], title: 'เมรุเมา', text: `${text} ${url}` }); return; }
+    } catch (e: any) { if (e?.name === 'AbortError') return; }
+    saveImage();
+  };
+  // … or save it (desktop / browsers without file sharing)
+  const saveImage = () => {
+    if (!card) return;
+    const a = document.createElement('a'); a.href = card.url; a.download = card.file.name; document.body.append(a); a.click(); a.remove();
+    flash('บันทึกรูปแล้ว');
+  };
+  const shareLink = async () => {
+    try { if (navigator.share) { await navigator.share({ title: 'เมรุเมา', text, url }); return; } } catch (e: any) { if (e?.name === 'AbortError') return; }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); flash('คัดลอกลิงก์แล้ว'); } catch { setLink(url); }
+  };
+  const closeCard = () => { if (card) URL.revokeObjectURL(card.url); setCard(null); };
   const again = () => { resetQuiz(); navigate('/ready', 'portal'); };
   return <main className="stage result" style={{ '--aura': g.aura } as any}>
     <SceneBg bg="result" blur dim={0.1} />
@@ -56,13 +83,25 @@ export default function Result({ id }: { id: GhostId }) {
         </section>
       </div>
       <div className="r-actions r-step" style={{ '--s': 7 } as any}>
-        <button className="btn-orange" onClick={share}>แชร์ผลลัพธ์ <span className="mini-ghost" aria-hidden="true" /></button>
+        <button className="btn-orange" onClick={share} disabled={busy}>{busy ? 'กำลังเสกรูป...' : 'แชร์ผลลัพธ์'} <span className="mini-ghost" aria-hidden="true" /></button>
         <button className="btn-purple" data-sfx="back" onClick={() => navigate('/', 'portal')}><span className="mini-ghost p" aria-hidden="true" /> หน้าหลัก</button>
         <button className="link-again" onClick={again}>เล่นอีกครั้ง</button>
       </div>
     </div>
     {link && <div className="share-fallback" role="dialog" aria-label="คัดลอกลิงก์">
       <p>คัดลอกลิงก์นี้ไปแชร์ได้เลย</p><input readOnly value={link} onFocus={(e: any) => e.currentTarget.select()} autoFocus /><button className="pill small" onClick={() => setLink(null)}>ปิด</button>
+    </div>}
+    {card && <div className="modal-back" onClick={closeCard}>
+      <div className="share-card" role="dialog" aria-modal="true" aria-label="รูปผลลัพธ์" onClick={(e: any) => e.stopPropagation()}>
+        <button className="modal-x" onClick={closeCard} data-sfx="back" aria-label="ปิด">×</button>
+        <img src={card.url} alt={`ผลลัพธ์: ${g.name}`} className="share-preview" />
+        <p className="share-hint">บนมือถือกดค้างที่รูปเพื่อบันทึกได้เลย</p>
+        <div className="share-actions">
+          <button className="btn-orange" onClick={shareImage}>แชร์รูป</button>
+          <button className="btn-purple" onClick={saveImage}>บันทึกรูป</button>
+          <button className="link-again" onClick={shareLink}>คัดลอกลิงก์</button>
+        </div>
+      </div>
     </div>}
     <Toast msg={toast} />
   </main>;
