@@ -114,7 +114,7 @@ export default function Home() {
       <footer className="footer">
         <div className="f-links">
           <a href="https://www.instagram.com/gyoza_pt/" target="_blank" rel="noreferrer"><Img slug="icons/email" alt="" /> IG : Gyoza_pt</a>
-          <a href="https://merumao.app" target="_blank" rel="noreferrer"><Img slug="icons/website" alt="" /> https://Merumao.app</a>
+          <a href="https://personality-quizgame.vercel.app/" target="_blank" rel="noreferrer"><Img slug="icons/website" alt="" /> https://Merumao.app</a>
         </div>
         <hr />
         <p className="f-stats"><span>◆ 8 วิญญาณ</span><span>◆ 10 ไพ่ทำนาย</span><span>◆ 1 ตัวตนของเจ้า</span></p>

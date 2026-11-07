@@ -6,6 +6,9 @@ import { Flame, Img, Particles, SceneBg, Toast } from '../components/ui';
 import { play } from '../lib/sound';
 import { makeResultImage } from '../lib/shareImage';
 
+// icons in front of the 3 trait chips (same order as the mockup: food / chat / ghost)
+const CHIP_ICONS = ['assets/result/chip-1-bowl.webp', 'assets/result/chip-2-chat.webp', 'assets/result/chip-3-ghost.webp'];
+
 export default function Result({ id }: { id: GhostId }) {
   const g = GHOSTS[id];
   const [more, setMore] = useState(false);
@@ -70,7 +73,7 @@ export default function Result({ id }: { id: GhostId }) {
             <button className="more" onClick={() => setMore(m => !m)} aria-expanded={more}>{more ? 'ย่อ' : 'อ่านเพิ่มเติม...'}</button>
           </div>
           <ul className="chips r-step" style={{ '--s': 3 } as any} title={g.chipsDraft ? 'draft' : undefined}>
-            {g.chips.map((c, i) => <li key={c} style={{ '--k': i } as any}><span className="chip-ic" aria-hidden="true" />{c}</li>)}
+            {g.chips.map((c, i) => <li key={c} style={{ '--k': i } as any}><img src={CHIP_ICONS[i]} alt="" className="chip-ic" width={34} height={34} />{c}</li>)}
           </ul>
           <div className="traits">
             {([['str', 'จุดแข็ง', g.strengths], ['weak', 'จุดอ่อน', g.weaknesses], ['love', 'ความรัก', g.love]] as const).map(([k, t, d], i) =>
@@ -83,8 +86,8 @@ export default function Result({ id }: { id: GhostId }) {
         </section>
       </div>
       <div className="r-actions r-step" style={{ '--s': 7 } as any}>
-        <button className="btn-orange" onClick={share} disabled={busy}>{busy ? 'กำลังเสกรูป...' : 'แชร์ผลลัพธ์'} <span className="mini-ghost" aria-hidden="true" /></button>
-        <button className="btn-purple" data-sfx="back" onClick={() => navigate('/', 'portal')}><span className="mini-ghost p" aria-hidden="true" /> หน้าหลัก</button>
+        <button className="btn-orange" onClick={share} disabled={busy}>{busy ? 'กำลังเสกรูป...' : 'แชร์ผลลัพธ์'} <img src="assets/result/btn-ghost-yellow.webp" alt="" className="btn-ic" width={34} height={34} /></button>
+        <button className="btn-purple" data-sfx="back" onClick={() => navigate('/', 'portal')}><img src="assets/result/btn-ghost-purple.webp" alt="" className="btn-ic" width={34} height={34} /> หน้าหลัก</button>
         <button className="link-again" onClick={again}>เล่นอีกครั้ง</button>
       </div>
     </div>

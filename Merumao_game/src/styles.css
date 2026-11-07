@@ -201,7 +201,7 @@ img.img { display: block; max-width: 100%; height: auto; }
 .narration { margin: 0; max-width: 980px; text-align: center; font-family: var(--script); font-style: italic; font-weight: 500; font-size: clamp(17px, 1.75vw, 24px); line-height: 1.85; text-shadow: 0 2px 10px rgba(0, 0, 0, .8); }
 .narration .line { display: block; animation: lineIn .7s ease both; }
 .narration.static { animation: lineIn .8s .3s both; }
-@keyframes lineIn { from { opacity: 0; transform: translateY(10px); filter: blur(4px); } }
+@keyframes lineIn { from { opacity: 0; transform: translateY(10px); } }
 .intro-nav { width: 100%; max-width: 1000px; margin-top: auto; padding-top: 18px; display: flex; align-items: center; justify-content: space-between; }
 .dots { display: flex; gap: 8px; } .dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, .3); transition: .3s; } .dots i.on { background: var(--gold); width: 22px; border-radius: 4px; }
 
@@ -550,3 +550,10 @@ img.img { display: block; max-width: 100%; height: auto; }
 .share-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; }
 .share-actions .btn-orange, .share-actions .btn-purple { padding: 10px 20px; font-size: 17px; }
 .btn-orange:disabled { opacity: .7; cursor: wait; }
+
+/* ============ v5: real icons on result chips + buttons ============ */
+.chips li .chip-ic { width: 34px; height: 34px; object-fit: contain; border-radius: 0; background: none; box-shadow: none; filter: drop-shadow(0 0 6px rgba(255, 180, 240, .55)); flex: none; }
+.btn-ic { width: 34px; height: 34px; object-fit: contain; flex: none; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .35)); animation: idle 3s ease-in-out infinite; }
+.btn-purple .btn-ic { animation-delay: -1.5s; }
+@media (max-width: 760px) { .chips li .chip-ic { width: 24px; height: 24px; } .btn-ic { width: 28px; height: 28px; } }
+@media (max-width: 760px) { .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; } .chips li { white-space: nowrap; padding: 6px 14px 6px 8px; font-size: 15px; } }
