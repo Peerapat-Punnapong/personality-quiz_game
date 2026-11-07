@@ -580,3 +580,6 @@ img.img { display: block; max-width: 100%; height: auto; }
 
 /* v7: no backdrop images behind the 'ข้ามภพ' steps section (owner's request) */
 .how-scene { display: none; }
+
+/* v8: long ghost names (16 ghosts) stay on one line on phones */
+@media (max-width: 760px) { .name-plate { font-size: clamp(17px, 5.4vw, 26px); padding: 10px 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
