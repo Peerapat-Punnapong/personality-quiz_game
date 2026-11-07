@@ -61,8 +61,7 @@ export default function Home() {
     {/* HOW TO PLAY */}
     <section className="sec how" id="how">
       <Smoke />
-      <Img slug="home/tavern" className="how-bg" alt="" />
-      <Reveal><FlameTitle>ข้ามภพไปเอาตัวตนที่ซ่อนอยู่</FlameTitle></Reveal>
+      <Reveal><FlameTitle>ข้ามภพไป<wbr /><span className="nowrap">เอาตัวตนที่ซ่อนอยู่</span></FlameTitle></Reveal>
       <Reveal delay={100}><p className="sec-sub">“เลือกไพ่ทั้ง 10 ใบ แล้วให้เซียมซีเผยตัวตนผีในตัวคุณ”</p></Reveal>
       <ol className="steps">
         {STEPS.map((s, i) => <Reveal as="li" key={s.n} delay={150 + i * 140} className="step">
@@ -102,7 +101,7 @@ export default function Home() {
     <section className="sec final">
       <Img slug="bg/ready-blur" className="final-bg" alt="" />
       <Smoke variant="b" />
-      <Reveal><FlameTitle>ข้ามภพไปเอาตัวตนที่ซ่อนอยู่</FlameTitle></Reveal>
+      <Reveal><FlameTitle>ข้ามภพไป<wbr /><span className="nowrap">เอาตัวตนที่ซ่อนอยู่</span></FlameTitle></Reveal>
       <Reveal delay={80}><p className="final-p">เมื่อโลกคนเป็นหลับใหล โรงเตี๊ยมเมรุเมากลับคึกคัก!</p></Reveal>
       <Reveal delay={140}><p className="final-p">ไพ่ทำนายทั้ง 10 ใบกำลังรอเจ้าอยู่ มาค้นหาว่าตัวตนที่ซ่อนอยู่ของเจ้าจะเหมือนวิญญาณตนใดใน 8 คาแรกเตอร์สุดป่วน</p></Reveal>
       <button className="btn-ghost center" onClick={start}>เริ่มเปิดไพ่ทำนาย <Arrow /></button>
