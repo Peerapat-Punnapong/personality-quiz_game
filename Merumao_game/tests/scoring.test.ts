@@ -1,34 +1,28 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeResult, SCORING } from '../src/data/scoring';
-import { GHOST_ORDER } from '../src/data/ghosts';
+import { computeResult, mbtiOf, SCORING } from '../src/data/scoring';
+import { GHOSTS, GHOST_ORDER } from '../src/data/ghosts';
 
-test('table is balanced: each ghost 5× primary, 5× secondary', () => {
-  const p: Record<string, number> = {}, s: Record<string, number> = {};
-  Object.values(SCORING).flat().forEach(([a, b]) => { p[a] = (p[a] || 0) + 1; s[b] = (s[b] || 0) + 1; assert.notEqual(a, b); });
-  GHOST_ORDER.forEach(g => { assert.equal(p[g], 5, g); assert.equal(s[g], 5, g); });
+test('16 ghosts cover all 16 MBTI types exactly once', () => {
+  const types = GHOST_ORDER.map(g => GHOSTS[g].mbti);
+  assert.equal(new Set(types).size, 16);
 });
-test('deterministic', () => {
-  const a = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1];
-  assert.equal(computeResult(a), computeResult([...a]));
-});
-test('all-A → pob, all-D → pret-ish deterministic', () => {
-  assert.equal(computeResult(Array(10).fill(0)), 'pob');
-  assert.ok(GHOST_ORDER.includes(computeResult(Array(10).fill(3))));
-});
-test('rejects incomplete answers', () => { assert.throws(() => computeResult([0, 1])); });
-test('distribution over all 4^10 combinations: every ghost 10–16%', () => {
-  const c: Record<string, number> = {}; const a = Array(10).fill(0); const N = 4 ** 10;
-  for (let k = 0; k < N; k++) {
-    let x = k; for (let i = 0; i < 10; i++) { a[i] = x & 3; x >>= 2; }
-    const g = computeResult(a); c[g] = (c[g] || 0) + 1;
+test('every question splits each used axis 2–2 and axes are orthogonal', () => {
+  const ax = [['E', 'I'], ['S', 'N'], ['T', 'F'], ['J', 'P']];
+  for (const opts of Object.values(SCORING)) {
+    const v = opts.map(c => ax.map(([a, b]) => (c.includes(a) ? 1 : c.includes(b) ? -1 : 0)));
+    for (let k = 0; k < 4; k++) assert.equal(v.reduce((s, r) => s + r[k], 0), 0);
+    for (let k = 0; k < 4; k++) for (let m = k + 1; m < 4; m++) assert.equal(v.reduce((s, r) => s + r[k] * r[m], 0), 0);
   }
-  GHOST_ORDER.forEach(g => { const pct = 100 * c[g] / N; assert.ok(pct >= 10 && pct <= 16, `${g} ${pct.toFixed(1)}%`); });
+});
+test('deterministic + rejects incomplete', () => {
+  const a = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1];
+  assert.equal(computeResult(a), computeResult([...a])); assert.throws(() => computeResult([0]));
+});
+test('all 4^10 combinations: every ghost reachable, each 4–9%', () => {
+  const c: Record<string, number> = {}; const a = Array(10).fill(0); const N = 4 ** 10;
+  for (let k = 0; k < N; k++) { let x = k; for (let i = 0; i < 10; i++) { a[i] = x & 3; x >>= 2; } const g = computeResult(a); c[g] = (c[g] || 0) + 1; }
+  GHOST_ORDER.forEach(g => { const pct = 100 * (c[g] || 0) / N; assert.ok(pct >= 4 && pct <= 9, `${g} ${pct.toFixed(1)}%`); });
   console.log(Object.fromEntries(GHOST_ORDER.map(g => [g, (100 * c[g] / N).toFixed(1) + '%'])));
 });
-test('tie-break uses most recent primary', () => {
-  // construct: every ghost reachable
-  const seen = new Set<string>(); const a = Array(10).fill(0);
-  for (let k = 0; k < 4 ** 10 && seen.size < 8; k += 7) { let x = k; for (let i = 0; i < 10; i++) { a[i] = x & 3; x >>= 2; } seen.add(computeResult(a)); }
-  assert.equal(seen.size, 8);
-});
+test('sanity: all-A answers → extravert feeler', () => { assert.match(mbtiOf(Array(10).fill(0)), /^E.F./); });

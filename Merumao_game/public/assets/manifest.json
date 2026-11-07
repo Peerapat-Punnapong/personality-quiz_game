@@ -712,5 +712,53 @@
   "w": 368,
   "h": 278,
   "source": "extracted"
+ },
+ "ghosts/ruean": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีเรือนเตือนพลาดผู้เยาว์ 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/maemo": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีแม่หมอขอไอจีหนุ่ม 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/phrai": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีพรายตาลายเมื่อมองเธอ 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/krahang": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีกระหังลังเลจะส่งจุ๊บ 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/khomloi": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีโคมลอยร่องรองหาเมียน้อย 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/nangram": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีนางรำชวนรวมแก๊ง 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/pusom": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีปู่จุ๊กกรู๋เห็นสาวสวย 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
+ },
+ "ghosts/chaothi": {
+  "src": "ตัวละครเพิ่ม8บุคลิกภาพ/ผีเจ้าที่หนี้ยังไม่จ่าย 1.svg",
+  "w": 760,
+  "h": 760,
+  "source": "original-svg"
  }
 }

@@ -15,7 +15,7 @@ const STEPS = [
   { icon: 'icons/step-siamsi', n: 3, t: 'เสี่ยงเซียมซี', d: ['เซียมซีจะทำนายว่าคุณเป็นผีตนใด', 'พร้อมอธิบายแบบจัดเต็ม'] },
 ];
 const BULLETS: [string, string][] = [
-  ['icons/bullet-mirror', 'ค้นพบว่าตัวตนเจ้าคล้ายผีไทยตนใดใน 8 คาแรกเตอร์'], ['icons/bullet-cards', 'เลือกไพ่ 10 ใบ ไม่มีคำตอบถูกหรือผิด'],
+  ['icons/bullet-mirror', 'ค้นพบว่าตัวตนเจ้าคล้ายผีไทยตนใดใน 16 คาแรกเตอร์'], ['icons/bullet-cards', 'เลือกไพ่ 10 ใบ ไม่มีคำตอบถูกหรือผิด'],
   ['icons/bullet-scroll', 'รับคำทำนายบุคลิก จุดแข็ง จุดอ่อน และความรัก'], ['icons/bullet-share', 'แชร์ผลลัพธ์ชวนเพื่อนมาค้นหาตัวตนด้วยกัน'],
 ];
 
@@ -89,10 +89,10 @@ export default function Home() {
     {/* LORE TEASER */}
     <section className="sec lore-teaser">
       <Img slug="bg/intro4-blur" className="lt-bg" alt="" />
-      <Reveal className="lt-art"><Img slug="home/group" alt="วิญญาณทั้ง 8 ตนร่วมวงที่โรงเตี๊ยมเมรุเมา" className="tilt-card" /></Reveal>
+      <Reveal className="lt-art"><Img slug="home/group" alt="เหล่าวิญญาณร่วมวงที่โรงเตี๊ยมเมรุเมา" className="tilt-card" /></Reveal>
       <Reveal delay={120} className="lt-copy">
         <h2 className="script-title"><Flame /> เมรุเมา โลกแห่งผี <Flame flip /></h2>
-        <p className="script-p">เมื่อโลกของคนเป็นเงียบสงัด<br />โลกของเหล่าผีกลับเพิ่งเริ่มคึกคัก...<br />ณ โรงเตี๊ยมลึกลับที่ซ่อนอยู่ระหว่างสองภพ<br />วิญญาณทั้ง 8 ตนต่างมีเรื่องราว<br />ความปรารถนา และตัวตนที่แตกต่างกัน<br />แต่ใครจะรู้ว่า... หนึ่งในวิญญาณเหล่านั้น<br />อาจมีนิสัยเหมือนเจ้ามากกว่าที่คิด</p>
+        <p className="script-p">เมื่อโลกของคนเป็นเงียบสงัด<br />โลกของเหล่าผีกลับเพิ่งเริ่มคึกคัก...<br />ณ โรงเตี๊ยมลึกลับที่ซ่อนอยู่ระหว่างสองภพ<br />วิญญาณทั้ง 16 ตนต่างมีเรื่องราว<br />ความปรารถนา และตัวตนที่แตกต่างกัน<br />แต่ใครจะรู้ว่า... หนึ่งในวิญญาณเหล่านั้น<br />อาจมีนิสัยเหมือนเจ้ามากกว่าที่คิด</p>
         <button className="btn-ghost" onClick={() => navigate('/lore', 'fade')}>เปิดตำนานเมรุเมา <Arrow /></button>
       </Reveal>
     </section>
@@ -103,7 +103,7 @@ export default function Home() {
       <Smoke variant="b" />
       <Reveal><FlameTitle>ข้ามภพไป<wbr /><span className="nowrap">เอาตัวตนที่ซ่อนอยู่</span></FlameTitle></Reveal>
       <Reveal delay={80}><p className="final-p">เมื่อโลกคนเป็นหลับใหล โรงเตี๊ยมเมรุเมากลับคึกคัก!</p></Reveal>
-      <Reveal delay={140}><p className="final-p">ไพ่ทำนายทั้ง 10 ใบกำลังรอเจ้าอยู่ มาค้นหาว่าตัวตนที่ซ่อนอยู่ของเจ้าจะเหมือนวิญญาณตนใดใน 8 คาแรกเตอร์สุดป่วน</p></Reveal>
+      <Reveal delay={140}><p className="final-p">ไพ่ทำนายทั้ง 10 ใบกำลังรอเจ้าอยู่ มาค้นหาว่าตัวตนที่ซ่อนอยู่ของเจ้าจะเหมือนวิญญาณตนใดใน 16 คาแรกเตอร์สุดป่วน</p></Reveal>
       <button className="btn-ghost center" onClick={start}>เริ่มเปิดไพ่ทำนาย <Arrow /></button>
       <Reveal className="donate-band">
         <Img slug="icons/step-bowl" alt="" className="db-bowl" />
@@ -116,7 +116,7 @@ export default function Home() {
           <a href="https://personality-quizgame.vercel.app/" target="_blank" rel="noreferrer"><Img slug="icons/website" alt="" /> https://Merumao.app</a>
         </div>
         <hr />
-        <p className="f-stats"><span>◆ 8 วิญญาณ</span><span>◆ 10 ไพ่ทำนาย</span><span>◆ 1 ตัวตนของเจ้า</span></p>
+        <p className="f-stats"><span>◆ 16 วิญญาณ</span><span>◆ 10 ไพ่ทำนาย</span><span>◆ 1 ตัวตนของเจ้า</span></p>
         <p className="f-copy">© 2026 MERUMAO · โรงเตี๊ยมสำหรับคนที่ยังไม่อยากกลับ</p>
       </footer>
     </section>

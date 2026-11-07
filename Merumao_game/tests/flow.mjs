@@ -36,7 +36,7 @@ for (const vp of [{ width: 1440, height: 1024 }, { width: 390, height: 844 }]) {
   if (vp.width === 390) await skip.click();
   await p.waitForURL(/#result-/, { timeout: 25000 });
   const id = p.url().split('-').pop();
-    ok(id === 'am', 'result matches scoring engine (answers ABCDABCDAB → am): ' + id);
+    ok(id === 'maemo', 'result matches scoring engine (answers ABCDABCDAB → INFJ maemo): ' + id);
   await p.waitForTimeout(2500);
   // no-stretch: rendered aspect == natural aspect for every <img> not using object-fit
   const bad = await p.evaluate(() => [...document.images].filter(i => i.complete && i.naturalWidth && i.offsetWidth > 2).filter(i => {
@@ -46,9 +46,10 @@ for (const vp of [{ width: 1440, height: 1024 }, { width: 390, height: 844 }]) {
   ok(bad.length === 0, 'no stretched images on result ' + bad.join(', '));
   ok(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'no horizontal scroll');
   // share fallback (no navigator.share in headless) → clipboard or link box
-  await p.getByRole('button', { name: /แชร์ผลลัพธ์/ }).click(); await p.waitForTimeout(600);
-  ok(await p.locator('.toast.show, .share-fallback').count() > 0, 'share gives feedback');
-  if (await p.locator('.share-fallback').count()) await p.locator('.share-fallback button').click();
+  await p.getByRole('button', { name: /แชร์ผลลัพธ์/ }).click();
+  await p.waitForSelector('.share-preview', { timeout: 10000 }).catch(() => {});
+  ok(await p.locator('.share-preview').count() > 0, 'share builds the result image');
+  await p.locator('.share-card .modal-x').click(); await p.waitForTimeout(300);
   await p.getByRole('button', { name: /หน้าหลัก/ }).click(); await p.waitForTimeout(1600);
   ok(p.url().endsWith('#home'), 'home button');
   await p.goto(BASE + '#result-pret'); await p.waitForTimeout(800);

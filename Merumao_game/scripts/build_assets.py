@@ -91,5 +91,11 @@ QR = sys.argv[2] if len(sys.argv) > 2 else None
 if QR and os.path.exists(QR):
     q = Image.open(QR).convert('RGB'); q.thumbnail((720, 1000), Image.LANCZOS)
     save(q, 'donate/qr', 'donate QR (supplied in chat)', q=92)
+# ---- v4: 8 extra ghosts (16 MBTI) ----
+NEW = 'ตัวละครเพิ่ม8บุคลิกภาพ'
+for gid, f in {'ruean': 'ผีเรือนเตือนพลาดผู้เยาว์ 1', 'maemo': 'ผีแม่หมอขอไอจีหนุ่ม 1', 'phrai': 'ผีพรายตาลายเมื่อมองเธอ 1', 'krahang': 'ผีกระหังลังเลจะส่งจุ๊บ 1',
+               'khomloi': 'ผีโคมลอยร่องรองหาเมียน้อย 1', 'nangram': 'ผีนางรำชวนรวมแก๊ง 1', 'pusom': 'ผีปู่จุ๊กกรู๋เห็นสาวสวย 1', 'chaothi': 'ผีเจ้าที่หนี้ยังไม่จ่าย 1'}.items():
+    if os.path.exists(os.path.join(U, NEW, f + '.svg')):
+        save(svg(f'{NEW}/{f}.svg', 760), f'ghosts/{gid}', f'{NEW}/{f}.svg', 'original-svg', q=88)
 json.dump(manifest, open(os.path.join(OUT, 'manifest.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('v3 assets ok')
